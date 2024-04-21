@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫与古代中国·主页</title>
+    <link rel="stylesheet" href="首页.css">
+</head>
+
+<body>
+    <h1>猫</h1>
+    <div class="background"><span>与古代中国</span></div>
+    <h2>
+        猫不仅是深受现代人喜爱的动物。<br/>
+        中国古代很早就有关于猫的<a href="历史.html" target="_blank">记载</a>。<br/>
+        古时候，上至达官贵族，下至平民百姓，都有不少吸猫达人。<br/>
+        他们以<a href="诗画.html#诗作" target="_blank">诗词</a>描写猫，还以<a href="诗画.html#画作" target="_blank">画作</a>描绘猫，<br/>
+        形成了独具特色的中国猫文化。
+    </h2>
+
+    <script>
+        const background = document.querySelector(".background")
+
+        document.addEventListener('scroll', () => {
+            const scrollY = window.scrollY
+
+            if (scrollY !== 0) {
+                background.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`
+            }else{
+                background.style.backgroundPosition = ''
+            }
+        })
+    </script>
+</body>
+
+</html>
